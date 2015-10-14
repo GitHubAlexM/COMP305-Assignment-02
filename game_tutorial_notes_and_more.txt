@@ -1,0 +1,125 @@
+
+ADDING THE PICKUP ITEM > COIN TO THE GAME
+put coin sprite in hierarchy
+add circle colider2d to the coin
+write a script
+call it coin.cs
+edit it
+under void update
+void OntriggerEnter2D (Collider2D other)
+{
+if(other.gameObject.CompareTag("Player"))
+{
+Destroy(gameObject);
+}
+}
+
+make it a trigger
+add the script to the coin object
+
+time to spawn the coins
+
+new script
+SpawnCoins.cs
+drag the script onto the ground gameobject on the hierarchy
+create empty child gameobject for ground
+x = 0.25 y = 2
+call it coinSpawn1
+duplicate it
+x = 0
+coinSpawn2
+again
+coinSpawn3
+x = -0.25
+
+open SpawnCoin.cs
+declare variables under public class...
+public Transform[] coinSpawns;
+public GameObject coin;
+
+in void Start()
+Spawn();
+
+above void Update()
+void Spawn()
+{
+for (int i = 0; i < coinSpawns.Length; i++)
+{
+int coinFlip = Random.Range (0,2);
+if (coinFlip > 0)
+Instantiate (coin, coinSpawns[i].position, Quaternion.identity);
+}
+}
+
+Next there should be an array for ground in the new script created
+
+drag the coins into the array
+drag the coin from the inspector into the prefab
+add the coin prefab onto the script for ground
+you can now delete the coin game object in the hierarchy
+
+click play to test
+somethings wrong
+apply to prefab....
+
+THIS IS WHERE YOU FINISH ADDING THE COIN OR THE PICK UP OBJECT IN THE GAME
+NOTES:
+THE TUTORIAL DOES NOT TEACH YOU ON GUI SO LEARN IT YOUR SELF...
+
+THIS PART OF THE TUTORIAL CREATES AN OBJECT THAT IS PRETTY MUCH INVISIBLE UNLESS YOU DIDNT WANT IT TO BE
+AND IT IS FOR WHEN YOUR CHARACTER FALLS, YOU DIE AND RESTART A NEW LEVEL.
+AGAIN, THERE IS NO GUI SO LEARN IT YOURSELF
+
+create 3d object > cube
+put a box collider 2d on it
+remove the current collider first...
+x= 220 y= -20
+is trigger
+scale x = 500
+
+call the cube DeathTrigger
+create new c# script DeathTrigger.cs
+
+below void OntriggerEnter2D (Collider2D other)
+{
+if (other.gameObject.CompareTag("Player"))
+{
+Application.LoadLevel(Application.loadedLevel);
+}
+}
+
+script is finished
+add the script to DeathTrigger game object
+uncheck meshrenderer
+
+now for added measure
+put the player higher so you do not see the ground.
+
+in simpleplatformcontroller.cs
+change [HideInInspector] public bool jump = false;
+remove [HideInInspector]
+go to unity engine
+in the inspector for hero
+in the script uncheck jump
+then re add [HideInInspector]
+where it used to be
+this way the character wont junp like an idiot at the start
+
+loool
+something went wrong?
+sometimes the platform is spawned near -20
+so change the deathtrigger y axis to like -40 or more...
+
+
+This is the end of the tutorial yay
+
+
+WHAT ELSE TO DO...
+CHANGE THE HERO SPRITE
+ADD A BACKGROUND
+ADD ENEMIES?
+ADD A GUI FOR GAME MENU, SCORE, DEATHS AND SO ON
+ADD MUSIC AND SOUND
+INTERNAL DOCUMENTATION
+REVISIT ASSIGNMENT OUTLINE FOR MORE INQUIRY... PROB SPELLED THAT WORD WRONG LOOOL
+MORE CAPS CUS I'M YELLING.... jokes...
