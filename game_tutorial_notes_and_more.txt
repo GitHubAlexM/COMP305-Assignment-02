@@ -6,7 +6,7 @@ write a script
 call it coin.cs
 edit it
 under void update
-void OntriggerEnter2D (Collider2D other)
+void OnTriggerEnter2D (Collider2D other)
 {
 if(other.gameObject.CompareTag("Player"))
 {
@@ -32,7 +32,7 @@ again
 coinSpawn3
 x = -0.25
 
-open SpawnCoin.cs
+open SpawnCoins.cs
 declare variables under public class...
 public Transform[] coinSpawns;
 public GameObject coin;

@@ -1,10 +1,22 @@
-﻿using UnityEngine;
+﻿
+/*
+ * Source file name: 	SimplePlatformController.cs 
+ * Author's name:		Alexander Man
+ * Last Modified by:	Alexander Man
+ * Date Last Modified:	October 14th, 2015
+ * Description:
+ * 
+ * This controls the player's movement.
+ * 
+*/
+
+using UnityEngine;
 using System.Collections;
 
 public class SimplePlatformController : MonoBehaviour {
-
+	// player properties
 	[HideInInspector] public bool facingRight = true;
-	[HideInInspector] public bool jump = true;
+	[HideInInspector] public bool jump = false;
 
 	public float moveForce = 365f;
 	public float maxSpeed = 5f;
@@ -14,6 +26,7 @@ public class SimplePlatformController : MonoBehaviour {
 	private bool grounded = false;
 	private Animator anim; 
 	private Rigidbody2D rb2d;
+
 	// Use this for initialization
 	void Awake () {
 	
@@ -26,7 +39,16 @@ public class SimplePlatformController : MonoBehaviour {
 	void Update () {
 	
 		grounded = Physics2D.Linecast (transform.position, groundCheck.position, 1 << LayerMask.NameToLayer ("Ground"));
-			if(Input.GetButtonDown("Jump") && grounded)
+			
+		// The player can use WASD, ARROW KEYS, and the Space key
+		if(Input.GetKeyDown("w") && grounded)
+		{
+			jump = true;
+		}
+		if(Input.GetKeyDown("space") && grounded)
+		{
+			jump = true;
+		}if(Input.GetKeyDown("up") && grounded)
 		{
 			jump = true;
 		}
@@ -55,7 +77,7 @@ public class SimplePlatformController : MonoBehaviour {
 		}
 	}
 
-
+	// incase the player turns to the left
 	void Flip()
 	{
 		facingRight = !facingRight;
