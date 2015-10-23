@@ -1,0 +1,66 @@
+
+folders needed in assets
+animation
+audio
+fonts
+materials
+prefabs
+scenes
+scripts
+sprites
+
+
+
+animator
+
+parameters
+bool walking
+right click any state
+make transition to hero_walk
+right click the make transition arrow
+
+
+
+
+GAME CONTEXT
+
+Essentially this is another page of more notes loool
+
+game story
+assets
+hero big dude
+learn sprite animation
+hero will animate in running and jumping and idle.
+enemy animates but the hero must avoid them
+hero picks up an item currently is a coin
+animate that item above platform
+picking up the item which is currently a coin will increase the score of the player
+the goal of the game is to reach the end goal.
+terrain is not auto generated
+map is preset
+make some plat forms differ in size properties and functions
+game background
+add sound and music
+bachround music starts as soon as game loads loops if the music file is finished and stops playing when the program is closed
+the player has a jump sound
+collecting the item gives a sound
+touching the enemy and dying makes a death sound.
+the player restarts the whole level when he dies by touching the enemy or terrain fail.
+score is not reset because it just indicates how much of that item he has received.
+the ui will show the number of tries attempted in beating the level
+the game title not decided yet
+and the collection score
+after game is done
+the game resets automatically to the beginning.
+if the player reaches the end goal the game ends and tells the player that they beat the game level.
+there should be a restart game button and a exit game button then.
+for the start menu
+game background
+title
+game start
+and exit game
+i have decided at the begining of the game level where the player is first spawned.
+it will show the controls and basics of the game as text within the game screen map
+when this project is done submit via ecentennial and the github repository.
+
+UI
