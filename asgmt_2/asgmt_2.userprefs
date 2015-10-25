@@ -1,10 +1,8 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\2D_Platformer_Tutorial\2D_Platformer_Tutorial\Assets\Scripts\SimplePlatformController.cs">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\2D_Platformer_Tutorial\2D_Platformer_Tutorial\Temp\Compiled-Normal-Diffuse.shader">
     <Files>
-      <File FileName="..\2D_Platformer_Tutorial\2D_Platformer_Tutorial\2D_Platformer_Tutorial.sln" Line="41" Column="1" />
-      <File FileName="..\2D_Platformer_Tutorial\2D_Platformer_Tutorial\Assets\Scripts\SimplePlatformController.cs" Line="24" Column="31" />
-      <File FileName="Assets\Scripts\playerController.cs" Line="10" Column="36" />
+      <File FileName="..\2D_Platformer_Tutorial\2D_Platformer_Tutorial\Temp\Compiled-Normal-Diffuse.shader" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
