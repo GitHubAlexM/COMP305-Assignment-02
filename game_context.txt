@@ -66,18 +66,5 @@ when this project is done submit via ecentennial and the github repository.
 UI
 
 
-character moves properly
-animation works
-map loaded
-background loaded
-music loaded
-it also restarts on loaded level. don't know how to change that
-enemy loaded. they have an idle animation
-they are to be avoided.
-pick up items loaded. no use as of yet.
-
-stuff to do
-add ui
-add score, attempts, and so on.
-external game doc.
-format code and clean up other stuff.
+character moves properly, animation works, map loaded, background loaded, music loaded, it also restarts on loaded level. don't know how to change that., enemy loaded. they have an idle animation
+they are to be avoided., pick up items loaded. no use as of yet., still need to add ui, add score, attempts, and so on, external game doc, format code and clean up other stuff.
